@@ -1,5 +1,10 @@
 # This file is subject to the terms and conditions defined in
 # file 'LICENSE', which is part of this source code package.
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)) +
+                "/../../")
+
 import numpy as np
 
 from src.rrt.rrt import RRT
