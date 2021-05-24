@@ -1,5 +1,6 @@
 # This file is subject to the terms and conditions defined in
 # file 'LICENSE', which is part of this source code package.
+import os
 
 import plotly as py
 from plotly import graph_objs as go
@@ -13,7 +14,7 @@ class Plot(object):
         Create a plot
         :param filename: filename
         """
-        self.filename = "../../output/visualizations/" + filename + ".html"
+        self.filename = os.path.abspath(os.path.join(os.getcwd(), "../..")) + "/output/visualizations/" + filename + ".html"
         self.data = []
         self.layout = {'title': 'Plot',
                        'showlegend': False
